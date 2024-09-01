@@ -3,6 +3,22 @@ import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Header } from "@/components/header/header";
+import localFont from "next/font/local";
+
+export const integralFont = localFont({
+  src: "../integral.otf",
+  display: "swap",
+});
+
+export const satoshiFont = localFont({
+  src: "../satoshi.otf",
+  display: "swap",
+});
+
+export const satoshiBoldFont = localFont({
+  src: "../satoshi-bold.otf",
+  display: "swap",
+});
 
 const defaultUrl = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
@@ -29,9 +45,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className="min-h-screen flex flex-col items-center">
-            <div className="flex-1 w-full flex flex-col gap-20 items-center">
+            <div className="flex-1 w-full flex flex-col items-center">
               <Header />
-              <div className="flex flex-col gap-20 max-w-5xl p-5">
+              <div className="flex flex-col gap-20 max-w-[1440px] w-full">
                 {children}
               </div>
 

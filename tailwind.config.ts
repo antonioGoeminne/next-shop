@@ -6,6 +6,7 @@ const config = {
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./app/**/*.{ts,tsx}",
+    "./features/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
   prefix: "",
@@ -19,7 +20,8 @@ const config = {
     },
     extend: {
       colors: {
-        gray: '#F0F0F0',
+        gray: "#F0F0F0",
+        ["gray-100"]: "#f2f0f1",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
