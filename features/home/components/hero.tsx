@@ -7,7 +7,7 @@ const heroDesktop =
 
 export const Hero = () => {
   return (
-    <div className="sm:flex w-full max-w-6xl mx-auto bg-gray-100">
+    <div className="sm:flex w-full max-w-6xl mx-auto">
       <div className="pl-3 pr-0 pt-7 xl:pt-20">
         <h1
           className={`${integralFont.className} max-w-sm w-full text-4xl xl:text-5xl xl:max-w-xl`}
