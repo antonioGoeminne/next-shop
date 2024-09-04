@@ -15,7 +15,7 @@ export const StarRating: React.FC<StarRatingProps> = ({
   return (
     <div className="flex items-center gap-1">
       {[...Array(quantity).fill(1)].map((_, index) => (
-        <div>
+        <div key={index}>
           <div className="md:hidden">
             <Svg width={15} height={15} key={index} path={starIcon} />
           </div>
