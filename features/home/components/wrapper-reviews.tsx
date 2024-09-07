@@ -1,9 +1,11 @@
 import { integralFont } from "@/app/layout";
 import { Carousel } from "@/components/ui/caroussel/carousel";
 import { ReviewCard } from "@/features/review/components/review-card";
+import { useGetHappyReviews } from "@/features/review/hooks/use-get-happy-reviews";
 
-export const WrapperReviews = () => {
-  const slides = [1, 2, 3, 4];
+export const WrapperReviews = async () => {
+  const { reviews } = await useGetHappyReviews();
+
   return (
     <div className="bg-white p-2">
       <Carousel
@@ -15,12 +17,12 @@ export const WrapperReviews = () => {
           </p>
         }
       >
-        {slides.map((index) => (
+        {reviews.map((review, index) => (
           <div
             className="embla__slide max-w-[350px] md:max-w-[400px]"
             key={index}
           >
-            <ReviewCard />
+            <ReviewCard {...review} />
           </div>
         ))}
       </Carousel>
