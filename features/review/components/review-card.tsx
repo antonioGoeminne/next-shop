@@ -2,17 +2,16 @@ import { satoshiBoldFont, satoshiFont } from "@/app/layout";
 import { Svg } from "@/components/svg";
 import checkIcon from "@/icons/checkIcon.svg";
 import { StarRating } from "@/components/ui/star-rating";
+import { Review } from "../types/reviews";
 
-const description = `"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”`;
-const title = "Sarah.M";
-const rating = 5;
+export const ReviewCard = (props: Review) => {
+  const { user_name, rating, description } = props;
 
-export const ReviewCard = () => {
   return (
-    <div className="rounded-xl border border-[10%] p-6 max-h-[240px] flex flex-col gap-2">
+    <div className="rounded-xl border border-[10%] p-6 max-h-[240px] flex flex-col gap-2 h-full">
       <StarRating quantity={rating} />
       <span className="flex items-center gap-1">
-        <p className={`${satoshiBoldFont.className} text-xl`}>{title}</p>
+        <p className={`${satoshiBoldFont.className} text-xl`}>{user_name}</p>
         <Svg width={24} height={24} path={checkIcon} />
       </span>
       <p className={`${satoshiFont.className} max-w-full opacity-[60%]`}>
