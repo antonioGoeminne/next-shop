@@ -7,7 +7,7 @@ export const WrapperReviews = async () => {
   const { reviews } = await useGetHappyReviews();
 
   return (
-    <div className="bg-white p-2">
+    <div className="bg-white p-2 pb-44">
       <Carousel
         title={
           <p

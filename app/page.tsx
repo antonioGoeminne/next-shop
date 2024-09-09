@@ -1,6 +1,5 @@
 import { Brands } from "@/features/home/components/brands";
 import { Hero } from "@/features/home/components/hero";
-import { NewsletterCta } from "@/features/home/components/newsletter-cta";
 import { ProductsWrapper } from "@/features/home/components/products-wrapper";
 import { WrapperReviews } from "@/features/home/components/wrapper-reviews";
 import { useGetNewArrivals } from "@/features/home/hooks/use-get-newarrivals";
@@ -20,9 +19,6 @@ export default async function Index() {
         <ProductsWrapper products={topSellingProducts} title="TOP SELLING" />
       </div>
       <WrapperReviews />
-      <div className="py-6 bg-white">
-        <NewsletterCta />
-      </div>
     </main>
   );
 }

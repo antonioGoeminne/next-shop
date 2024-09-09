@@ -6,9 +6,9 @@ import email_icon from "@/icons/email.svg";
 
 export const NewsletterCta = () => {
   return (
-    <div className="bg-black rounded-xl py-6 md:py-8 px-8 md:px-12 flex flex-col md:flex-row items-center md:items-start justify-between mx-8 gap-4">
+    <div className="bg-black rounded-xl py-6 md:py-8 px-8 md:px-12 flex flex-col md:flex-row items-center md:items-start justify-between mx-auto gap-4 max-w-[1200px]">
       <p
-        className={`${integralFont.className} text-3xl md:text-4xl max-w-[551px] text-white`}
+        className={`${integralFont.className} text-3xl md:text-4xl max-w-[551px] text-left text-white`}
       >
         STAY UPTO DATE ABOUT OUR LATEST OFFERS
       </p>

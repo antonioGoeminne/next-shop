@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Company",
+    "options": [
+      { "title": "About Us" },
+      { "title": "Features" },
+      { "title": "Work" },
+      { "title": "Carreer" }
+    ]
+  },
+  {
+    "title": "Help",
+    "options": [
+      { "title": "Customer Support" },
+      { "title": "Delivery Details" },
+      { "title": "Terms & Conditions" },
+      { "title": "Privacy Policy" }
+    ]
+  },
+  {
+    "title": "Faq",
+    "options": [
+      { "title": "Account" },
+      { "title": "Manage Deliveries" },
+      { "title": "Orders" },
+      { "title": "Payments" }
+    ]
+  },
+  {
+    "title": "Resources",
+    "options": [
+      { "title": "Free eBooks" },
+      { "title": "Development Tutorial" },
+      { "title": "How to - Blog" },
+      { "title": "Youtuve Playlist" }
+    ]
+  }
+]
