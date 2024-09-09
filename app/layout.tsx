@@ -1,9 +1,9 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
 import { GeistSans } from "geist/font/sans";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
 import { Header } from "@/components/header/header";
 import localFont from "next/font/local";
+import { Footer } from "@/features/home/components/footer";
 
 export const integralFont = localFont({
   src: "../integral.otf",
@@ -50,21 +50,7 @@ export default function RootLayout({
               <div className="flex flex-col gap-20 max-w-[1440px] w-full">
                 {children}
               </div>
-
-              <footer className="w-full flex items-center justify-center border-t mx-auto text-center text-xs gap-8 py-16">
-                <p>
-                  Powered by{" "}
-                  <a
-                    href="https://supabase.com/?utm_source=create-next-app&utm_medium=template&utm_term=nextjs"
-                    target="_blank"
-                    className="font-bold hover:underline"
-                    rel="noreferrer"
-                  >
-                    Supabase
-                  </a>
-                </p>
-                <ThemeSwitcher />
-              </footer>
+              <Footer />
             </div>
           </main>
         </ThemeProvider>
