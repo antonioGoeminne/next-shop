@@ -15,12 +15,12 @@ import googleIcon from "@/icons/googlePay.svg";
 
 export const Footer = () => {
   return (
-    <div className="relative h-[500px] py-12 w-full flex flex-col bg-gray mx-auto text-center text-xs gap-8 px-4">
+    <div className="relative h-[1000px] md:h-[500px] py-12 w-full flex flex-col bg-gray mx-auto text-center text-xs gap-8 px-4">
       <div className="relative -top-40 flex flex-col gap-6">
         <div className="py-6 relative  w-full">
           <NewsletterCta />
         </div>
-        <div className="mx-auto max-w-[1200px] flex justify-between w-full">
+        <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row justify-between w-full">
           <div className="flex flex-col gap-6">
             <Logo />
             <p
@@ -36,13 +36,15 @@ export const Footer = () => {
               <Svg width={28} height={28} path={githubIcon} />
             </ul>
           </div>
-          {footerLinks.map((footerLink) => (
-            <MenuLinks
-              key={footerLink.title}
-              title={footerLink.title}
-              options={footerLink.options}
-            />
-          ))}
+          <div className="grid grid-cols-4 grid-rows-4 gap-4 md:gap-12  my-12 md:m-0 ">
+            {footerLinks.map((footerLink) => (
+              <MenuLinks
+                key={footerLink.title}
+                title={footerLink.title}
+                options={footerLink.options}
+              />
+            ))}
+          </div>
         </div>
         <div className="h-[1px] max-w-[1200px] mx-auto opacity-[10%] w-full bg-black mt-6 mb-1"></div>
         <div className="w-full flex justify-between max-w-[1200px] mx-auto">
@@ -83,7 +85,7 @@ interface MenuLinksProps {
 
 const MenuLinks: React.FC<MenuLinksProps> = ({ title, options }) => {
   return (
-    <ul className="flex flex-col gap-3">
+    <ul className="row-span-4 col-span-2 md:col-span-1 flex flex-col gap-4">
       <li
         className={`text-sm font-bold ${satoshiFont.className} uppercase text-left`}
       >
