@@ -25,7 +25,7 @@ export const Header = () => {
           </p>
         </span>
       </MarketingHeader>
-      <nav className="w-full flex justify-center border-b border-b-foreground/10 h-16">
+      <nav className="w-full flex justify-center h-16">
         <div className="w-full max-w-6xl flex justify-between items-center p-3 px-2 text-sm">
           <div className="flex gap-12 items-center font-semibold flex-1 mr-8">
             <div className="flex gap-2">
